@@ -1,6 +1,10 @@
 from fastapi import Request
 from fastapi import status
 from fastapi.responses import JSONResponse
+
+# ...existing code...
+
+# Place this endpoint after app is defined
 @app.delete("/activities/{activity_name}/unregister")
 def unregister_from_activity(activity_name: str, email: str):
     """Unregister a student from an activity"""
